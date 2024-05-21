@@ -1,0 +1,104 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos para la aplicación del clima */
+.weather-app {
+    max-width: 1000px; /* Ajusta el ancho máximo */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+    width: 80px;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+}
+
+.weather-info {
+    width: 100%;
+    text-align: center;
+}
+
+.current-weather {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centra los elementos en dispositivos grandes */
+    align-items: center; /* Centra los elementos verticalmente */
+    flex-wrap: wrap; /* Ajusta al contenido */
+}
+
+.temperature, .description {
+    margin: 10px; /* Agrega espacio entre los elementos */
+}
+
+.icon img {
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+.forecast {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.forecast-item {
+    text-align: center;
+    margin-top: 10px;
+    flex: 0 1 calc(33.33% - 20px); /* Ajusta para 3 elementos por fila */
+}
+
+/* Estilos específicos para el widget de clima */
+.weather-app {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+}
+
+.location-input {
+    padding: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0f62fe;
+}
