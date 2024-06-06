@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/clima.png" />
     <title>App de Clima</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="weather-app">
-        <input type="text" class="location-input" placeholder="Ingresa el nombre de una ciudad">
-        <button class="search-button">Buscar Clima</button>
+    <main class="weather-app">
+        <input type="text" class="location-input" placeholder="Ingresa el nombre de una ciudad" aria-label="Buscar ciudad">
+        <button class="search-button" aria-label="Buscar Clima">Buscar Clima</button>
         <div class="weather-info">
             <div class="location"></div>
             <div class="current-weather">
@@ -19,7 +20,7 @@
             </div>
             <div class="forecast"></div>
         </div>
-    </div>
+    </main>
     <script src="js/app.js"></script>
 </body>
 </html>

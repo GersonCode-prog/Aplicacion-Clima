@@ -1,4 +1,13 @@
-/* Estilos generales */
+/* Variables CSS */
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #4CAF50;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #dadce0;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,37 +16,42 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
-    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
-    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
 }
 
-/* Estilos para la aplicación del clima */
 .weather-app {
-    max-width: 1000px; /* Ajusta el ancho máximo */
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #f1f1f1;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 }
 
 .location-input {
     width: calc(100% - 90px);
     padding: 10px;
-    margin-bottom: 10px;
-    border: none;
+    border: 1px solid var(--border-color);
     border-radius: 5px 0 0 5px;
 }
 
 .search-button {
     width: 80px;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     border: none;
     border-radius: 0 5px 5px 0;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: var(--secondary-color);
 }
 
 .weather-info {
@@ -48,17 +62,17 @@ body {
 .current-weather {
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Centra los elementos en dispositivos grandes */
-    align-items: center; /* Centra los elementos verticalmente */
-    flex-wrap: wrap; /* Ajusta al contenido */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .temperature, .description {
-    margin: 10px; /* Agrega espacio entre los elementos */
+    margin: 10px;
 }
 
 .icon img {
-    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+    max-width: 100px;
     max-height: 100px;
     margin-top: 10px;
 }
@@ -74,31 +88,26 @@ body {
 .forecast-item {
     text-align: center;
     margin-top: 10px;
-    flex: 0 1 calc(33.33% - 20px); /* Ajusta para 3 elementos por fila */
+    flex: 0 1 calc(33.33% - 20px);
 }
 
-/* Estilos específicos para el widget de clima */
-.weather-app {
-    background-color: #ffffff;
-    border: 1px solid #dadce0;
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .location-input {
+        width: calc(100% - 70px);
+    }
+
+    .search-button {
+        width: 60px;
+    }
+
+    .forecast-item {
+        flex: 0 1 calc(50% - 10px);
+    }
 }
 
-.location-input {
-    padding: 10px;
-    border: 1px solid #dadce0;
-    border-radius: 5px;
-}
-
-.search-button {
-    padding: 10px 20px;
-    background-color: #1a73e8;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search-button:hover {
-    background-color: #0f62fe;
+@media (max-width: 480px) {
+    .forecast-item {
+        flex: 0 1 calc(100% - 20px);
+    }
 }
