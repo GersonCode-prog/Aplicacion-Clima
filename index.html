@@ -1,25 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-sky="clear-day">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/clima.png" />
+    <meta name="description" content="Consulta el clima actual, las pr&oacute;ximas 24 horas y el pron&oacute;stico de cualquier ciudad.">
+    <meta name="theme-color" content="#1b62ac">
+    <link rel="icon" type="image/png" href="img/clima.png">
     <title>App de Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main class="weather-app">
-        <input type="text" class="location-input" placeholder="Ingresa el nombre de una ciudad" aria-label="Buscar ciudad">
-        <button class="search-button" aria-label="Buscar Clima">Buscar Clima</button>
-        <div class="weather-info">
-            <div class="location"></div>
-            <div class="current-weather">
-                <div class="temperature"></div>
-                <div class="description"></div>
-                <div class="icon"></div>
+        <section class="sky">
+            <canvas class="particles" aria-hidden="true"></canvas>
+
+            <header class="toolbar">
+                <form class="search" role="search" autocomplete="off">
+                    <div class="search-field">
+                        <input type="text" class="location-input" placeholder="Busca una ciudad" aria-label="Buscar ciudad" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
+                        <ul class="suggestions" id="suggestions" role="listbox" aria-label="Ciudades sugeridas" hidden></ul>
+                    </div>
+                    <button type="submit" class="search-button">Buscar</button>
+                </form>
+                <button type="button" class="geo-button" aria-label="Usar mi ubicaci&oacute;n" title="Usar mi ubicaci&oacute;n">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+                </button>
+                <div class="units" role="group" aria-label="Unidad de temperatura">
+                    <button type="button" data-unit="c" aria-pressed="true">&deg;C</button>
+                    <button type="button" data-unit="f" aria-pressed="false">&deg;F</button>
+                </div>
+            </header>
+
+            <p class="status" role="status" aria-live="polite"></p>
+
+            <div class="weather-info" hidden>
+                <div class="hero">
+                    <h1 class="location"></h1>
+                    <p class="local-time"></p>
+                    <div class="current-weather">
+                        <div class="temperature"></div>
+                        <div class="now-summary">
+                            <div class="icon"></div>
+                            <div class="description"></div>
+                            <p class="feels"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ridge" role="img"></div>
             </div>
-            <div class="forecast"></div>
-        </div>
+        </section>
+
+        <section class="ground" hidden>
+            <div class="ground-inner">
+                <div>
+                    <h2 class="forecast-title"></h2>
+                    <div class="forecast"></div>
+                </div>
+                <div>
+                    <h2>Ahora mismo</h2>
+                    <dl class="details"></dl>
+                </div>
+            </div>
+            <p class="credit">Datos de <a href="https://www.weatherapi.com/" rel="noopener" target="_blank">WeatherAPI.com</a></p>
+        </section>
     </main>
     <script src="js/app.js"></script>
 </body>
