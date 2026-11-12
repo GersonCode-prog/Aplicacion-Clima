@@ -17,3 +17,12 @@ Aplicación web para consultar el clima actual, las próximas 24 horas y el pron
 ## Uso
 
 Abre `index.html` en el navegador o publícalo con GitHub Pages.
+
+## Estructura del proyecto
+
+```
+├── index.html   # Estructura de la página
+├── css/         # Estilos
+├── js/app.js    # Lógica y llamadas a WeatherAPI
+└── img/         # Íconos y fondos
+```
