@@ -68,14 +68,14 @@ Aplicación web para consultar el clima actual, las próximas 24 horas y el pron
 
 ## Tecnologías
 
-- HTML, CSS y JavaScript puro
+- HTML, CSS y JavaScript 
 - [WeatherAPI](https://www.weatherapi.com/) para los datos del clima
 
 ## Uso
 
 Abre `index.html` en el navegador o publícalo con GitHub Pages.
 
-## Estructura del proyecto
+## Estructura del proyecto pura logica
 
 ```
 ├── index.html   # Estructura de la página
