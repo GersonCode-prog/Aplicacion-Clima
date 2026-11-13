@@ -87,3 +87,5 @@ Abre `index.html` en el navegador o publícalo con GitHub Pages.
 ## Autor
 
 Desarrollado por **Gerson Batún** · [@GersonCode-prog](https://github.com/GersonCode-prog)
+
+⭐ Si te gustó el proyecto, regálale una estrella.
