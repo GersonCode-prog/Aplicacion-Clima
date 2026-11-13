@@ -1,4 +1,4 @@
-# App de Clima
+# App de Clima GT
 
 Aplicación web para consultar el clima actual, las próximas 24 horas y el pronóstico de cualquier ciudad.
 
