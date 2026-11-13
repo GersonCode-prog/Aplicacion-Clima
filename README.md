@@ -57,7 +57,7 @@ Aplicación web para consultar el clima actual, las próximas 24 horas y el pron
 
 ## Demo
 
-👉 [Ver la app en vivo](https://gersoncode-prog.github.io/Aplicacion-Clima/)
+👉 [Ver la app en vivo](https://gersoncode-prog.github.io/Aplicacion-Clima/)🌦️
 
 ## Funciones
 
